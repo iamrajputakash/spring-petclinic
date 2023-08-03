@@ -1,9 +1,14 @@
-FROM openjdk:8-jre-alpine
+FROM eclipse-temurin:17-jdk-jammy
 
-EXPOSE 8181
+WORKDIR /app
 
-# copy jar into image
-COPY target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar /usr/bin/spring-petclinic.jar
+	
+COPY .mvn/ .mvn COPY mvnw pom.xml ./
 
-# run application with this command line 
-ENTRYPOINT ["java","-jar","/usr/bin/spring-petclinic.jar","--server.port=8181"]
+RUN./mvnw dependency:resolve
+	
+COPY src ./src
+	
+CMD ["./mvnw", "spring-boot:run"]
+
+EXPOSE 8000
