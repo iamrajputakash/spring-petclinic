@@ -8,9 +8,16 @@ pipeline {
                 git url:"https://github.com/iamrajputakash/spring-petclinic.git", branch: "main"
             }
         }
+        stage("Build artic"){
+            steps{
+                sh "./mvnw clean install -DskipTests package"
+            }
+        }
         stage("Build"){
             steps {
                 echo "Building the image"
+                sh "ls"
+                sh "pwd"
                 sh "docker build -t my-spring-petclinic-app ."
             }
         }
