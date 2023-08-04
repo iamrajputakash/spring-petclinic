@@ -2,9 +2,9 @@ version: "2.2"
 
 services:
   mysql:
-    image: mysql:8.0
+    image: shaw7355/my-spring-petclinic-app:latest
     ports:
-      - "3306:3306"
+      - "8000:8000"
     environment:
       - MYSQL_ROOT_PASSWORD=
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
