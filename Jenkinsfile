@@ -8,7 +8,7 @@ pipeline {
                 git url:"https://github.com/iamrajputakash/spring-petclinic.git", branch: "main"
             }
         }
-        stage("Build artic"){
+        stage("artifact"){
             steps{
                 sh "./mvnw clean install -DskipTests package"
             }
