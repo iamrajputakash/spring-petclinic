@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy the Spring Petclinic JAR file from the host to the container's working directory
  COPY target/spring-petclinic-3.1.0-SNAPSHOT.jar /app/spring-petclinic.jar
 
+
 # Expose port 8080 for the Spring Boot application
 EXPOSE 8000
 
