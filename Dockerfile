@@ -12,4 +12,4 @@ WORKDIR /app
 EXPOSE 8000
 
 # Define the command to run the Spring Boot application
-CMD ["java", "-jar", "spring-petclinic.jar"]
+CMD ["java", "-jar", "spring-petclinic.jar","--server.port=8000"]
