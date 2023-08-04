@@ -1,7 +1,7 @@
 version: "2.2"
 
 services:
-  mysql:
+  web:
     image: shaw7355/my-spring-petclinic-app:latest 
            # mysql:8.0
     ports:
