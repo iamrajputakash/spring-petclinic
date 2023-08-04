@@ -5,7 +5,7 @@ FROM openjdk:17-oracle
 WORKDIR /usr/bin/
 
 # Copy the Spring Petclinic JAR file from the host to the container's working directory
-COPY target/spring-petclinic-3.1.0-SNAPSHOT.jar /usr/bin/spring-petclinic.jar
+COPY /home/ubuntu/spring-petclinic/target /usr/bin/spring-petclinic.jar
 
 # Expose port 8080 for the Spring Boot application
 EXPOSE 8000
