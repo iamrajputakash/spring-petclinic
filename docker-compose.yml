@@ -6,4 +6,3 @@ services:
            # mysql:8.0
     ports:
       - "8000:8000"
-
