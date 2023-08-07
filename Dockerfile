@@ -1,4 +1,4 @@
-# Use the official OpenJDK 11 LTS image as the base image
+# Use the official OpenJDK image as the base image
 FROM openjdk:17-oracle
 
 # Set the working directory inside the container
